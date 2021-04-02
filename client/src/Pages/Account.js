@@ -1,10 +1,10 @@
 import React from 'react'
-import AccountHolderDiv from "../Components/Account/"
+import AccountHolderDiv from '../Components/Account/'
 
-export function Account(props) {
+export function Account() {
     return (
       <>
-        <AccountHolderDiv userData={props.userData} setUserData={props.setUserData} />
+        <AccountHolderDiv />
 
       </>
     );

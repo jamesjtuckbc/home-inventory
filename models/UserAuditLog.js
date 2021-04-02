@@ -1,23 +1,15 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Category extends Model {}
+class UserAuditLog extends Model {}
 
-Category.init(
+UserAuditLog.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-    },
-    item_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'item',
-        key: 'id',
-      },
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -27,14 +19,26 @@ Category.init(
         key: 'id',
       },
     },
-    description: {
+    first_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    created_date: {
-      type: DataTypes.DATE,
+    last_name: {
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true,
+      },
+    },
+    password_changed: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
     },
     modified_date: {
       type: DataTypes.DATE,
@@ -47,8 +51,8 @@ Category.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'category',
+    modelName: 'user_audit_log',
   }
 );
 
-module.exports = Category;
+module.exports = UserAuditLog;

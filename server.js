@@ -19,7 +19,7 @@ require('./config/passport')(User);
 app.use(routes);
 
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, function () {
         console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
     })

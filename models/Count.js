@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Category extends Model {}
+class Count extends Model {}
 
-Category.init(
+Count.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -31,6 +31,10 @@ Category.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    count: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+    },
     created_date: {
       type: DataTypes.DATE,
       allowNull: false,
@@ -47,8 +51,8 @@ Category.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'category',
+    modelName: 'count',
   }
 );
 
-module.exports = Category;
+module.exports = Count;

@@ -21,8 +21,8 @@ export function LoginPassport() {
   });
 
   const [userSignup, setUserSignup] = useState({
-    firstName: '',
-    lastName: '',
+    first_name: '',
+    last_name: '',
     email: '',
     password: '',
     passwordConf: '',
@@ -39,17 +39,17 @@ export function LoginPassport() {
             history.push('/account');
         }
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [auth]);
 
   function _handleChange(e) {
-    const { name, value } = e.target;
-    setUser({ ...user, [name]: value });
+    const { id, value } = e.target;
+    setUser({ ...user, [id]: value });
   }
 
   function _handleChangeSignup(e) {
-    const { name, value } = e.target;
-    setUserSignup({ ...userSignup, [name]: value });
+    const { id, value } = e.target;
+    console.log(e.target);
+    setUserSignup({ ...userSignup, [id]: value });
   }
 
   function _handleSubmit(e) {

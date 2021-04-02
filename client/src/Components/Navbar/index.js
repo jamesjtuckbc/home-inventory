@@ -4,9 +4,7 @@ import { withRouter } from 'react-router';
 import { useAuth } from '../../utils/context';
 
 function Navigation() {
-  // const { auth } = useAuth();
-  const auth = true;
-
+  const { auth } = useAuth();
 
   return (
     <Navbar bg='light' expand='md'>
@@ -19,6 +17,7 @@ function Navigation() {
             <Nav.Link href='/login'>Login</Nav.Link>
           ) : (
             <>
+              <Nav.Link href='/inventory'>Inventory</Nav.Link>
               <Nav.Link href='/account'>Account</Nav.Link>
               <Nav.Link href='/logout'>Logout</Nav.Link>
             </>

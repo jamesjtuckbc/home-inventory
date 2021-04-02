@@ -3,9 +3,8 @@ import { useHistory } from 'react-router-dom';
 import { API } from '../utils/API';
 import { useAuth } from '../utils/context'
 
-export function Logout(props) {
+export function Logout() {
     const { setAuth } = useAuth();
-    props.setLogBool(!props.logBool)
     API.logout();
     setAuth(null);
     const history = useHistory();

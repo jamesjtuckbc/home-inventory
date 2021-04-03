@@ -14,7 +14,7 @@ This is a full stack app to display, add, update, and delete home inventory.
 [Questions](#Questions)
 
 ## Installation
-
+NPM i
 
 
 ## Usage
@@ -27,7 +27,7 @@ This work is covered under the [The Do What the Fuck You Want to Public License]
 
 ## Contributing
 
-well this is a private repo so if you're reading this hopefully you know how I expect you to contribute. Or this is a public repo and I totally forgot to update my read-me. Both options are possible
+Please talk to me first!
 
 ## Tests
 

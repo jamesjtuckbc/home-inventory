@@ -10,7 +10,8 @@ Note.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-    },item_id: {
+    },
+    item_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
@@ -25,7 +26,8 @@ Note.init(
         model: 'user',
         key: 'id',
       },
-    },description: {
+    },
+    description: {
       type: DataTypes.STRING,
       allowNull: false,
     },

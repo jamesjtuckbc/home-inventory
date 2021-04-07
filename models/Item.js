@@ -19,6 +19,22 @@ Item.init(
         key: 'id',
       },
     },
+    location_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'location',
+        key: 'id',
+      },
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'category',
+        key: 'id',
+      },
+    },
     description: {
       type: DataTypes.STRING,
       allowNull: false,
